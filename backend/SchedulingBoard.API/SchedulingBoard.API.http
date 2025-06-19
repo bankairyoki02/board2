@@ -1,0 +1,6 @@
+@SchedulingBoard.API_HostAddress = http://localhost:5082
+
+GET {{SchedulingBoard.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
