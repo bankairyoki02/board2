@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SchedulingBoardDataset" targetNamespace="http://tempuri.org/SchedulingBoardDataset.xsd" xmlns:mstns="http://tempuri.org/SchedulingBoardDataset.xsd" xmlns="http://tempuri.org/SchedulingBoardDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SchedulingBoardDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SchedulingBoardDataset" msprop:Generator_UserDSName="SchedulingBoardDataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="UserWarehouseGroups" msprop:Generator_TableClassName="UserWarehouseGroupsDataTable" msprop:Generator_TableVarName="tableUserWarehouseGroups" msprop:Generator_RowChangedName="UserWarehouseGroupsRowChanged" msprop:Generator_TablePropName="UserWarehouseGroups" msprop:Generator_RowDeletingName="UserWarehouseGroupsRowDeleting" msprop:Generator_RowChangingName="UserWarehouseGroupsRowChanging" msprop:Generator_RowEvHandlerName="UserWarehouseGroupsRowChangeEventHandler" msprop:Generator_RowDeletedName="UserWarehouseGroupsRowDeleted" msprop:Generator_RowClassName="UserWarehouseGroupsRow" msprop:Generator_UserTableName="UserWarehouseGroups" msprop:Generator_RowEvArgName="UserWarehouseGroupsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="WarehouseGroup" msprop:Generator_ColumnVarNameInTable="columnWarehouseGroup" msprop:Generator_ColumnPropNameInRow="WarehouseGroup" msprop:Generator_ColumnPropNameInTable="WarehouseGroupColumn" msprop:Generator_UserColumnName="WarehouseGroup" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="userWarehouseGroupsWarehouses" msprop:Generator_TableClassName="userWarehouseGroupsWarehousesDataTable" msprop:Generator_TableVarName="tableuserWarehouseGroupsWarehouses" msprop:Generator_RowChangedName="userWarehouseGroupsWarehousesRowChanged" msprop:Generator_TablePropName="userWarehouseGroupsWarehouses" msprop:Generator_RowDeletingName="userWarehouseGroupsWarehousesRowDeleting" msprop:Generator_RowChangingName="userWarehouseGroupsWarehousesRowChanging" msprop:Generator_RowEvHandlerName="userWarehouseGroupsWarehousesRowChangeEventHandler" msprop:Generator_RowDeletedName="userWarehouseGroupsWarehousesRowDeleted" msprop:Generator_RowClassName="userWarehouseGroupsWarehousesRow" msprop:Generator_UserTableName="userWarehouseGroupsWarehouses" msprop:Generator_RowEvArgName="userWarehouseGroupsWarehousesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="WarehouseGroup" msprop:Generator_ColumnVarNameInTable="columnWarehouseGroup" msprop:Generator_ColumnPropNameInRow="WarehouseGroup" msprop:Generator_ColumnPropNameInTable="WarehouseGroupColumn" msprop:Generator_UserColumnName="WarehouseGroup" type="xs:string" minOccurs="0" />
+              <xs:element name="WarehouseCode" msprop:Generator_ColumnVarNameInTable="columnWarehouseCode" msprop:Generator_ColumnPropNameInRow="WarehouseCode" msprop:Generator_ColumnPropNameInTable="WarehouseCodeColumn" msprop:Generator_UserColumnName="WarehouseCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:UserWarehouseGroups" />
+      <xs:field xpath="mstns:WarehouseGroup" />
+    </xs:unique>
+    <xs:unique name="userWarehouseGroupsWarehousesKey1">
+      <xs:selector xpath=".//mstns:userWarehouseGroupsWarehouses" />
+      <xs:field xpath="mstns:WarehouseGroup" />
+      <xs:field xpath="mstns:WarehouseCode" />
+    </xs:unique>
+    <xs:keyref name="UserWarehouseGroups_userWarehouseGroupsWarehouses" refer="Constraint1" msprop:rel_Generator_UserChildTable="userWarehouseGroupsWarehouses" msprop:rel_Generator_ChildPropName="GetuserWarehouseGroupsWarehousesRows" msprop:rel_Generator_UserRelationName="UserWarehouseGroups_userWarehouseGroupsWarehouses" msprop:rel_Generator_RelationVarName="relationUserWarehouseGroups_userWarehouseGroupsWarehouses" msprop:rel_Generator_UserParentTable="UserWarehouseGroups" msprop:rel_Generator_ParentPropName="UserWarehouseGroupsRow">
+      <xs:selector xpath=".//mstns:userWarehouseGroupsWarehouses" />
+      <xs:field xpath="mstns:WarehouseGroup" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

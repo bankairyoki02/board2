@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Scheduling Board/bin/Debug
+/.vs/Scheduling Board/FileContentIndex
+/.vs/ProjectEvaluation
+/Scheduling Board/obj/x86/Debug
+/.vs/Scheduling Board/v17
+/Scheduling Board/bin/Release
+/Scheduling Board/obj/x86/Release

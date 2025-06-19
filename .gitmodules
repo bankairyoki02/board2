@@ -1,0 +1,3 @@
+[submodule "Scheduling Board/ClairUtilities"]
+	path = Scheduling Board/ClairUtilities
+	url = https://git.clairglobal.net/Finesse/ClairUtilities.git
